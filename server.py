@@ -1,3 +1,2 @@
 import givenergy
-
-givenergy.app.run(port=5000, debug=True)
+givenergy.app.run(host='0.0.0.0', port=5000)

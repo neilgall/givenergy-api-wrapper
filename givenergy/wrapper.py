@@ -20,7 +20,7 @@ plants = client.post(f'{GIVENERGY_BASE_URL}/plant/getPlantList').json()
 PLANT_ID = plants['rows'][0]['plantId']
 
 
-@app.route('/solarStatus')
+@app.route('/solar/current')
 def get_plant_summary():
   rsp = client.post(f'{GIVENERGY_BASE_URL}/plant/getPlantSummary')
   if rsp.status_code != 200:
@@ -28,7 +28,7 @@ def get_plant_summary():
   return rsp.content
 
 
-@app.route('/dailyData')
+@app.route('/solar/date')
 def get_daily_data():
   year = int(request.args['year'])
   month = int(request.args['month'])

@@ -9,7 +9,6 @@ COPY givenergy/ ./givenergy/
 COPY server.py ./
 
 EXPOSE 5000
-ENV USERNAME ""
-ENV PASSWORD ""
+ENV API_TOKEN ""
 
 CMD [ "python", "server.py" ]
